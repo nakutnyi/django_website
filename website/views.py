@@ -1,7 +1,7 @@
 """"""
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def root_index(request):
 
-    return HttpResponse(request, 'index.html')
+    return render(request, 'index.html')
