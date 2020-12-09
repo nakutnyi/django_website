@@ -1,0 +1,14 @@
+#sidebar {
+    color: #ffffff;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 15rem;
+    top: 1rem;
+    right: 1rem;
+    line-height: 2rem;
+}
+
+.row {
+    margin-top: 1.5rem;
+}

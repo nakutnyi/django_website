@@ -1,17 +1,70 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
     <title>Root Index</title>
     <style>
         body {color: #84c754; background-color: black; font: 100% Courier New; line-height: 26px; padding: 10px;}
       </style>
 </head>
 <body>
-    <h1>Welcome to My Portfolio Site</h1>
-    <h4>Below are my Django mini-projects:</h4>
-    <a href="/polls">Polling app from django's documentation</a><br>
-    <a href="https://fake-csv-app.herokuapp.com/">Fake CSV generation app</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 align-items-stretch">
+                <h1>Welcome to Roman Nakutnyi's Portfolio Site</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Started as a Python developer in 2018</h3>
+                <h3>Has worked as a backend developer and as a QA automation engineer since then</h3>
+            </div>
+            <div class="col-sm-4">
+                <div id="sidebar">
+                    <a href="https://drive.google.com/file/d/1TBb-lmbFKKDiiGmKl8erZXeXwrvWZJ0h/view?usp=sharing">Resume</a><br>
+                    <a href="https://www.linkedin.com/in/nakutnyi/">Linkedin</a><br>
+                    <a href="https://github.com/nakutnyi">Github</a>
+                </div>
+            </div>
+        </div>
+        <h3>My mini-projects</h3>
+        <div class="row">
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Polling App</h5>
+                        <h6 class="card-subtitle mb-2">
+                            For the lack of better projects at the moment I'm posting this app from Django's documentation that I followed through
+                        </h6>
+                        <ul>
+                            <li>Django</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <a  class="stretched-link" href="/polls"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Fake CSV generation app</h5>
+                        <h6 class="card-subtitle mb-2">Generate CSV files with fake data. Configure columns of different data types.</h6>
+                        <ul>
+                            <li>Django</li>
+                            <li>Celery</li>
+                            <li>Bootstrap</li>
+                            <li>Heroku</li>
+                            <li>AWS S3</li>
+                        </ul>
+                        <a class="stretched-link" href="https://fake-csv-app.herokuapp.com/"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
