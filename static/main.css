@@ -1,3 +1,15 @@
+body {
+    color: #84c754;
+    background-color: black;
+    font: 100% Courier New;
+    line-height: 26px;
+    padding: 10px;
+}
+
+.card:hover {
+    border: solid white 1px;
+}
+
 #sidebar {
     color: #ffffff;
     border: 0.1rem solid #ffffff;
