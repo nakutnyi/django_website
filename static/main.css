@@ -1,18 +1,16 @@
 body {
-    color: #84c754;
-    background-color: black;
-    font: 100% Courier New;
+    font: 100% Verdana;
     line-height: 26px;
     padding: 10px;
 }
 
 .card:hover {
-    border: solid white 1px;
+    box-shadow: 4px 8px #888888;
 }
 
+
 #sidebar {
-    color: #ffffff;
-    border: 0.1rem solid #ffffff;
+    border: 0.1rem solid gray;
     border-radius: 0.5rem;
     padding: 1rem;
     line-height: 2rem;

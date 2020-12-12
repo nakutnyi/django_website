@@ -5,11 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
+  <script src="{% static 'jquery-3.5.1.js' %}"></script>
+  <script src="{% static 'bootstrap-4.3.1-dist/js/bootstrap.min.js' %}"></script>
   <link rel="stylesheet" href="{% static 'main.css' %}">
   <title>Main Page</title>
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="btn-group btn-group-toggle">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" onclick="applyWhite()" autocomplete="off" checked> White Theme
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" onclick="applyDark()" autocomplete="off"> Dark Theme
+        </label>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12 align-items-stretch">
         <h1><strong>Welcome to Roman Nakutnyi's Portfolio Site</strong></h1>
@@ -31,7 +43,7 @@
     <h3>My mini-projects</h3>
     <div class="row">
       <div class="col-6 col-sm-4 d-flex align-items-stretch">
-        <div class="card bg-dark">
+        <div class="card text-white bg-info w-100">
           <div class="card-body">
             <h5 class="card-title">Polling App</h5>
             <h6 class="card-subtitle mb-2">
@@ -41,12 +53,12 @@
               <li>Django</li>
               <li>Bootstrap</li>
             </ul>
-            <a  class="stretched-link" href="/polls"></a>
+            <a  class="stretched-link" href="/polls" target="_blank"></a>
           </div>
         </div>
       </div>
       <div class="col-6 col-sm-4 d-flex align-items-stretch">
-        <div class="card bg-dark">
+        <div class="card text-white bg-info w-100">
           <div class="card-body">
             <h5 class="card-title">Fake CSV Generator</h5>
             <h6 class="card-subtitle mb-2">
@@ -59,11 +71,24 @@
               <li>Heroku</li>
               <li>AWS S3</li>
             </ul>
-            <a class="stretched-link" href="https://fake-csv-app.herokuapp.com/"></a>
+            <a class="stretched-link" href="https://fake-csv-app.herokuapp.com/" target="_blank"></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    function applyDark() {
+      console.log("I'm here");
+      $("body").css("background-color", "black");
+      $("body").css("font", "100% Courier New");
+      $("body").css("color", "#84c754");
+    }
+    function applyWhite() {
+      $("body").css("background-color", "white");
+      $("body").css("font", "100% Verdana");
+      $("body").css("color", "black");
+    }
+  </script>
 </body>
 </html>
