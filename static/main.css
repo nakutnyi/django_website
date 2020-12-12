@@ -19,3 +19,7 @@ body {
 .row {
     margin-top: 1.5rem;
 }
+
+ul {
+    padding-left: 20px;
+}
