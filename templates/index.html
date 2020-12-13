@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="{% static 'main.css' %}">
   <title>Main Page</title>
 </head>
-<body>
+<body class="light-background">
   <div class="container">
     <div class="row">
       <div class="btn-group btn-group-toggle">
         <label class="btn btn-secondary active">
-          <input type="radio" name="options" onclick="applyWhite()" autocomplete="off" checked> White Theme
+          <input type="radio" name="options" onclick="applyWhite()" autocomplete="off" checked> Light Theme
         </label>
         <label class="btn btn-secondary">
           <input type="radio" name="options" onclick="applyDark()" autocomplete="off"> Dark Theme
@@ -79,19 +79,20 @@
   </div>
   <script>
     function applyDark() {
-      console.log("I'm here");
-      $("body").css("background-color", "black");
       $("body").css("font", "100% Courier New");
       $("body").css("color", "#84c754");
       $(".card").removeClass("bg-info");
       $(".card").addClass("bg-dark");
+      $("body").removeClass("light-background");
+      $("body").addClass("dark-background");
     }
     function applyWhite() {
-      $("body").css("background-color", "white");
       $("body").css("font", "100% Verdana");
       $("body").css("color", "black");
       $(".card").removeClass("bg-dark");
       $(".card").addClass("bg-info");
+      $("body").removeClass("dark-background");
+      $("body").addClass("light-background");
     }
   </script>
 </body>
